@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Styling for the dropdown menu */
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+/* Styling for the dropdown button */
+.dropdown .dropdown-btn {
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 150px;
+padding: 10px;
+border: 1px solid #ccc;
+cursor: pointer;
+}
+
+/* Styling for the dropdown content */
+.dropdown-content {
+position: absolute;
+background-color: #f9f9f9;
+min-width: 150px;
+border: 1px solid #ccc;
+padding: 10px;
+display: none;
+z-index: 1;
+}
+
+/* Styling for the checkboxes */
+.dropdown-content input[type="checkbox"] {
+margin-bottom: 5px;
+}
+</style>
+</head>
+<body>
+<div class="dropdown">
+<div class="dropdown-btn">Choose your country</div>
+<div class="dropdown-content">
+<input type="checkbox" id="checkbox1" name="checkbox1" value="America">
+<label for="checkbox1">America</label><br>
+<input type="checkbox" id="checkbox2" name="checkbox2" value="Australia">
+<label for="checkbox2">Australia</label><br>
+<input type="checkbox" id="checkbox3" name="checkbox3" value="India">
+<label for="checkbox3">India</label><br>
+<input type="checkbox" id="checkbox4" name="checkbox4" value="France">
+<label for="checkbox4">France</label><br>
+</div>
+</div>
+
+<script>
+// JavaScript to toggle the dropdown content
+document.querySelector('.dropdown-btn').addEventListener('click', function() {
+var dropdownContent = this.nextElementSibling;
+dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+});
+</script>
+</body>
+</html>
